@@ -1,12 +1,13 @@
 from django.db import models
 from datetime import datetime
+from ckeditor.fields import RichTextField
 # Create your models here Realtor.
 
 
 class Realtor(models.Model):
     name = models.CharField(max_length=200)
     photo = models.ImageField(upload_to='photos/%Y/%m/%d/')
-    description = models.TextField(blank=True)
+    description = RichTextField(blank=True, null=True)
     phone = models.CharField(max_length=20)
     email = models.CharField(max_length=50)
     is_mvp = models.BooleanField(default=False)

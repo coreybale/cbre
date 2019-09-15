@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from ckeditor.fields import RichTextField
 from realtors.models import Realtor
 # Listings Model
 
@@ -11,7 +12,7 @@ class Listing(models.Model):
     city = models.CharField(max_length=200)
     state = models.CharField(max_length=200)
     zipcode = models.CharField(max_length=200)
-    description = models.TextField(blank=True)
+    description = RichTextField(blank=True, null=True)
     price = models.IntegerField()
     bedrooms = models.IntegerField()
     bathrooms = models.DecimalField(max_digits=2, decimal_places=1)

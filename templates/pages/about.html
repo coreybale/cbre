@@ -7,7 +7,7 @@
   <div class="container">
     <div id="showcase-inner-text" class="row text-center">
       <div class="col-md-12">
-        <h1 class="display-4">About BT Real Estate</h1>
+        <h1 class="display-4">About CB Real Estate</h1>
         <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
       </div>
     </div>
@@ -48,7 +48,7 @@
           <div class="card-body">
             <h5 class="card-title">Seller Of The Month</h5>
             <h6 class="text-info">{{realtor.name}}</h6>
-            <p class="card-text">{{realtor.description}}
+            <p class="card-text">{{realtor.description | safe}}
             </p>
           </div>
           {% endfor %}
