@@ -23,6 +23,7 @@ urlpatterns = [
     path('', include('pages.urls')),
     path('listings/', include('listings.urls')),
     path('accounts/', include('accounts.urls')),
+    path('contacts/', include('contacts.urls')),
     path('admin/', admin.site.urls),
     path('accounts/password_reset/',
          views.PasswordResetView.as_view(), name='password_reset'),
