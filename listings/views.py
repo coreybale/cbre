@@ -34,6 +34,13 @@ def search(request):
             queryset_list = queryset_list.filter(
                 description__icontains=keywords)
 
+            # Zip
+    if 'keywords2' in request.GET:
+        keywords2 = request.GET['keywords2']
+        if keywords2:
+            queryset_list = queryset_list.filter(
+                zipcode__icontains=keywords2)
+
     # City
     if 'city' in request.GET:
         city = request.GET['city']
