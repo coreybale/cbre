@@ -7,11 +7,11 @@ from realtors.models import Realtor
 
 class Listing(models.Model):
     realtor = models.ForeignKey(Realtor, on_delete=models.DO_NOTHING)
-    title = models.CharField(max_length=200)
-    address = models.CharField(max_length=200)
-    city = models.CharField(max_length=200)
-    state = models.CharField(max_length=200)
-    zipcode = models.CharField(max_length=200)
+    title = models.CharField(max_length=150)
+    address = models.CharField(max_length=150)
+    city = models.CharField(max_length=100)
+    state = models.CharField(max_length=100)
+    zipcode = models.CharField(max_length=5)
     description = RichTextField(blank=True, null=True)
     price = models.IntegerField()
     bedrooms = models.IntegerField()

@@ -137,12 +137,9 @@
                 <span class="float-right">{{listing.realtor}}
                 </span>
               </li>
-
-
             </ul>
           </div>
         </div>
-
         <!-- Description -->
         <div class="row mb-5">
           <div class="col-md-12">
@@ -150,9 +147,6 @@
           </div>
         </div>
       </div>
-
-
-
       <div class="col-md-3">
         <div class="card mb-3">
           <img class="card-img-top" src="{{listing.realtor.photo.url}}" alt="">
@@ -161,14 +155,15 @@
             <h6 class="text-info">{{listing.realtor}}</h6>
             <p class="card-text">{{listing.realtor.description | safe}}
             </p>
+            <h6 class="text-info"><i class="fas fa-phone"></i> {{listing.realtor.phone}}</h6>
+            <h6 class="text-info"><i class="fas fa-envelope-open"></i> {{listing.realtor.email}}</h6>
+            <button class="btn-primary btn-block btn-lg mt-4" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
           </div>
         </div>
-        <button class="btn-primary btn-block btn-lg" data-toggle="modal" data-target="#inquiryModal">Make An Inquiry</button>
       </div>
     </div>
   </div>
 </section>
-
 <!-- Inquiry Modal -->
 <div class="modal fade" id="inquiryModal" role="dialog">
   <div class="modal-dialog">
