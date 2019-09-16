@@ -146,4 +146,4 @@ MESSAGE_TAGS = {
 try:
     from .local_settings import *
 except ImportError:
-    pass
+    print('unable to load local_settings file')
