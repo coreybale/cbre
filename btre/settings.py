@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.humanize',
     'ckeditor',
+
 ]
 
 MIDDLEWARE = [
@@ -80,11 +81,15 @@ WSGI_APPLICATION = 'btre.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': '',
-        'NAME': '',
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': ''
+        'ENGINE': 'django.db.backends.mysql',
+        # MySQL database host ip.
+        'HOST': 'localhost',
+        # port number.
+        'PORT': '3306',
+        'NAME': 'django_connection',
+        'USER': 'root',
+        'PASSWORD': 'test'
+
     }
 }
 
